@@ -1,0 +1,17 @@
+ul{
+    background-color: grey;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    color: white;
+}
+
+li{
+    padding: 1em;
+    text-decoration: none;
+}
+
+.active {
+    color: black;
+    font-weight: bold;
+  }
