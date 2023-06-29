@@ -1,0 +1,19 @@
+.genres{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 33%;
+}
+
+.genero{
+    display: flex;
+    padding: 1em;
+    align-items: center;
+}
+
+button{
+    background-color: grey;
+    color: white;
+    padding: 0.5;
+    margin: 0.5em;
+}

@@ -6,8 +6,22 @@ import NavBar from './components/navBar/NavBarComponent';
 import DashboardPage from './pages/dashboard/DashboardPage';
 import GenerosPage from './pages/generos/GenerosPage';
 import PlataformasPage from './pages/plataformas/PlataformasPage';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import GenreEditPage from './pages/generos/EditPage';
 
 function App() {
+  const [platforms, setPlatforms] = useState([]);
+
+useEffect(()=>{
+  axios.get("http://localhost:3000/app/platforms")
+  .then(response => {
+    setPlatforms(response.data);
+  })
+  .catch(error => {
+    console.error('Error fetching platform data:', error);
+  });
+},[]);
 
   return (
     <div>
@@ -17,7 +31,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<DashboardPage />} />
           <Route path="/genres" element={<GenerosPage />} />
-          <Route path="/platforms" element={<PlataformasPage />} />
+          <Route path="/platforms" element={<PlataformasPage platforms={platforms}/>} />
+          <Route path="/genres/edit" element={<GenreEditPage />} />
         </Routes>
       </Router>
       <br/>
