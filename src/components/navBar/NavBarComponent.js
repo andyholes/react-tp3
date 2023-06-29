@@ -13,12 +13,12 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-          <Link to="/genres" className={location.pathname === '/genres' ? 'active' : ''}>
+          <Link to="/genres" className={location.pathname.startsWith('/genres') ? 'active' : ''}>
             Generos
           </Link>
         </li>
         <li>
-          <Link to="/platforms" className={location.pathname === '/platforms' ? 'active' : ''}>
+          <Link to="/platforms" className={location.pathname.startsWith('/platforms') ? 'active' : ''}>
             Plataformas
           </Link>
         </li>

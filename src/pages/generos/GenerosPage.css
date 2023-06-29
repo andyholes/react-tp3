@@ -1,8 +1,7 @@
 .genres{
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: 33%;
+    align-items: center;
 }
 
 .genero{
