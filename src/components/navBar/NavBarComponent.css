@@ -1,17 +1,29 @@
+.link {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+  }
+  
+  .link:hover {
+background-color: rgb(57, 57, 57);
+}
+
 ul{
     background-color: grey;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     color: white;
+    padding: 1em;
+    margin: 0;
 }
 
 li{
-    padding: 1em;
     text-decoration: none;
 }
 
 .active {
-    color: black;
-    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 1em;    background-color: black;
   }

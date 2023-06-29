@@ -8,17 +8,17 @@ export default function NavBar() {
     <nav>
       <ul>
         <li>
-          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
+          <Link to="/" className={location.pathname === '/' ? 'active' : 'link'}>
             Dashboard
           </Link>
         </li>
         <li>
-          <Link to="/genres" className={location.pathname.startsWith('/genres') ? 'active' : ''}>
+          <Link to="/genres" className={location.pathname.startsWith('/genres') ? 'active' : 'link'}>
             Generos
           </Link>
         </li>
         <li>
-          <Link to="/platforms" className={location.pathname.startsWith('/platforms') ? 'active' : ''}>
+          <Link to="/platforms" className={location.pathname.startsWith('/platforms') ? 'active' : 'link'}>
             Plataformas
           </Link>
         </li>
