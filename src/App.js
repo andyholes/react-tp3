@@ -31,8 +31,8 @@ useEffect(()=>{
         <Routes>
           <Route exact path="/" element={<DashboardPage />} />
           <Route path="/genres" element={<GenerosPage />} />
-          <Route path="/platforms" element={<PlataformasPage platforms={platforms}/>} />
           <Route path="/genres/edit" element={<GenreEditPage />} />
+          <Route path="/platforms" element={<PlataformasPage platforms={platforms}/>} />
         </Routes>
       </Router>
       <br/>
