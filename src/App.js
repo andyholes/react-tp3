@@ -4,24 +4,13 @@ import Footer from './components/footer/FooterComponent';
 import Header from './components/header/HeaderComponent';
 import NavBar from './components/navBar/NavBarComponent';
 import DashboardPage from './pages/dashboard/DashboardPage';
-import GenerosPage from './pages/generos/GenerosPage';
-import PlataformasPage from './pages/plataformas/PlataformasPage';
-import React, { useEffect, useState } from 'react';
+import GenerosPage from './pages/genres/GenerosPage'
+import PlataformasPage from './pages/platforms/PlataformasPage';
 import axios from 'axios';
-import GenreEditPage from './pages/generos/EditPage';
+import GenreEditPage from './pages/genres/EditPage';
+import PlatformEditPage from './pages/platforms/EditPage';
 
 function App() {
-  const [platforms, setPlatforms] = useState([]);
-
-useEffect(()=>{
-  axios.get("http://localhost:3000/app/platforms")
-  .then(response => {
-    setPlatforms(response.data);
-  })
-  .catch(error => {
-    console.error('Error fetching platform data:', error);
-  });
-},[]);
 
   return (
     <div>
@@ -32,7 +21,8 @@ useEffect(()=>{
           <Route exact path="/" element={<DashboardPage />} />
           <Route path="/genres" element={<GenerosPage />} />
           <Route path="/genres/edit" element={<GenreEditPage />} />
-          <Route path="/platforms" element={<PlataformasPage platforms={platforms}/>} />
+          <Route path="/platforms" element={<PlataformasPage />} />
+          <Route path="/platforms/edit" element={<PlatformEditPage />} />
         </Routes>
       </Router>
       <br/>
